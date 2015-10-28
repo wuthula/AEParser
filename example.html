@@ -16,8 +16,9 @@
 
       <script>
         var parserExample = function(){
+
             var submitForm = function(e){
-                var aeJson = parser.parse(document.getElementById("ae_content").value);
+                var aeJson = new AEParser.parse(document.getElementById("ae_content").value);
                 document.getElementById("ae_result").value =JSON.stringify(aeJson,null,'\t');
                 return false;
             };
